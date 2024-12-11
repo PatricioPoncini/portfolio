@@ -1,0 +1,49 @@
+<script setup>
+import { ref } from 'vue';
+
+const isDropdownVisible = ref(false);
+
+function toggleDropdown() {
+  isDropdownVisible.value = !isDropdownVisible.value;
+}
+
+function hideDropdown() {
+  isDropdownVisible.value = false;
+}
+</script>
+
+<template>
+  <div class="navbar bg-[#4338ca] text-gray-50">
+    <div class="flex-1">
+      <a href="#" class="btn btn-ghost normal-case text-2xl font-bold">Patricio Poncini</a>
+    </div>
+
+    <div class="flex-none">
+      <div class="dropdown dropdown-end lg:hidden">
+        <button
+            class="btn btn-ghost lg:hidden"
+            @click="toggleDropdown">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+        <ul
+            v-show="isDropdownVisible"
+            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#4338ca] rounded-box w-52 text-lg font-semibold"
+            @click="hideDropdown">
+          <li><a href="#aboutMe">Sobre mí</a></li>
+          <li><a href="#experiences">Experiencia</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+
+      <ul class="menu menu-horizontal hidden lg:flex px-1 text-lg font-semibold">
+        <li><a href="#aboutMe">Sobre mí</a></li>
+        <li><a href="#experiences">Experiencia</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</template>

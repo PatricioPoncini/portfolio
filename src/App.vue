@@ -6,6 +6,8 @@ import Experience from "./components/Experience.vue";
 import Skills from "./components/Skills.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
+import {ToastifyContainer} from "vue3-toastify";
+import 'vue3-toastify/dist/index.css';
 </script>
 
 <template>
@@ -16,4 +18,5 @@ import Footer from "./components/Footer.vue";
   <Skills />
   <Contact />
   <Footer />
+  <ToastifyContainer />
 </template>

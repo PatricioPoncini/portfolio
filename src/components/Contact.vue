@@ -1,18 +1,34 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import {toast} from "vue3-toastify";
 
 const name = ref<string>("");
 const email = ref<string>("");
 const message = ref<string>("");
+const isLoading = ref(false);
+
+const validateEmail = (email: string) => {
+  const re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
+
+const validateForm = () => {
+  if (isLoading.value) return false;
+
+  if (!name.value || !email.value || !message.value){
+    toast.error('Por favor verificar que todos los campos estén completos');
+    return false;
+  }
+  if (!validateEmail(email.value)) {
+    toast.error('El formato del email ingresado es incorrecto');
+    return false;
+  }
+  return true;
+}
 
 async function submitForm(event: Event) {
   event.preventDefault();
-
-  if (!name.value || !email.value || !message.value) {
-    // TODO: Vue icon con la validación
-    // TODO: Validar que el email sea válido
-    return;
-  }
+  if (!validateForm()) return;
 
   const formData = new FormData();
   formData.append("name", name.value);
@@ -20,23 +36,25 @@ async function submitForm(event: Event) {
   formData.append("message", message.value);
 
   try {
+    isLoading.value = true;
     const response = await fetch(`https://formsubmit.co/ajax/${import.meta.env.VITE_EMAIL_ID}`, {
       method: "POST",
       body: formData,
     });
 
     if (response.ok) {
-      // TODO: Vue toasts
-      alert("Mensaje enviado exitosamente.");
+      toast.success("Mensaje enviado exitosamente.");
       name.value = "";
       email.value = "";
       message.value = "";
     } else {
-      alert("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.");
+      toast.error("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.");
     }
   } catch (error) {
     console.error("Error al enviar el formulario:", error);
-    alert("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.");
+    toast.error("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.");
+  } finally {
+    isLoading.value = false;
   }
 }
 </script>
@@ -66,7 +84,8 @@ async function submitForm(event: Event) {
       <button
           class="btn btn-primary text-gray-50 w-full"
           @click.prevent="submitForm">
-        Enviar mensaje
+        <span v-if="!isLoading">Enviar</span>
+        <span v-else class="loading loading-spinner loading-md"></span>
       </button>
     </div>
   </div>

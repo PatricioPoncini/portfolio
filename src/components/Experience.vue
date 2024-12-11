@@ -9,7 +9,7 @@ onMounted(() => {
   experiences.value = [
     {
       title: "Desarrollador fullstack",
-      description: "Actualmente desempeño el rol de desarrollador fullstack, trabajando junto a mi equipo para mantener y desarrollar microservicios. Durante este tiempo, he adquirido conocimientos en patrones de diseño como Saga para la coordinación de microservicios, lo que ha mejorado la eficiencia y la resiliencia de las soluciones implementadas. ",
+      description: "Actualmente desempeño el rol de desarrollador fullstack trabajando junto a mi equipo para mantener y desarrollar microservicios, así como en la creación del frontend, tanto para las vistas principales como para el panel de administrador. Durante este tiempo, he adquirido conocimientos en patrones de diseño como Saga para la coordinación de microservicios, lo que ha mejorado la eficiencia y la resiliencia de las soluciones implementadas. ",
       startDate: "Septiembre 2023",
       endDate: "Presente",
       company: "Legendaryum",
@@ -17,7 +17,7 @@ onMounted(() => {
     },
     {
       title: "Desarrollador fullstack",
-      description: "Durante mi tiempo en esta empresa me desempeñé como desarrollador fullstack, creando un sistema robusto y escalable para una oficina virtual. Mi principal objetivo fue digitalizar y simplificar la gestión de trámites, eliminando la necesidad de atención presencial y logrando que el proceso sea completamente virtual y fácil de usar.",
+      description: "Durante mi tiempo en esta empresa me desempeñé como desarrollador fullstack, creando un sistema robusto y escalable para una oficina virtual. Mi principal objetivo fue digitalizar y simplificar la gestión de trámites, eliminando la necesidad de atención presencial y logrando que el proceso sea completamente virtual y fácil de usar. Además, contribuí al desarrollo del frontend, diseñando y optimizando las vistas tanto de la página principal como del panel administrativo, asegurando una experiencia de usuario intuitiva y eficiente en ambas interfaces.",
       startDate: "Septiembre 2022",
       endDate: "Septiembre 2023",
       company: "Consultora Pablo Barón",

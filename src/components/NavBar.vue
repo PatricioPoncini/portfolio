@@ -3,7 +3,8 @@ import { ref } from 'vue';
 
 const isDropdownVisible = ref(false);
 
-const toggleDropdown = () => {
+const toggleDropdown = (event: Event) => {
+  event.stopPropagation();
   isDropdownVisible.value = !isDropdownVisible.value;
 }
 

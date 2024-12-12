@@ -9,12 +9,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 bg-gray-50 h-96" id="skills">
-    <div class="flex flex-col items-center justify-center gap-8 px-4 py-8">
-      <p class="text-gray-900 text-3xl sm:text-4xl md:text-4xl font-bold text-center">
+  <div class="bg-gray-50 py-8" id="skills">
+    <div class="container mx-auto px-4">
+      <p class="text-gray-900 text-3xl sm:text-4xl md:text-4xl font-bold text-center mb-8">
         Skills
       </p>
-      <div class="flex flex-wrap gap-4 justify-center mx-10">
+      <div class="flex flex-wrap gap-4 justify-center">
         <div
             v-for="skill in skills"
             :key="skill"

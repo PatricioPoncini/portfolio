@@ -1,13 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 
 const isDropdownVisible = ref(false);
 
-function toggleDropdown() {
+const toggleDropdown = () => {
   isDropdownVisible.value = !isDropdownVisible.value;
 }
 
-function hideDropdown() {
+const hideDropdown = () => {
   isDropdownVisible.value = false;
 }
 </script>

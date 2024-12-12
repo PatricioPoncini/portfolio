@@ -22,11 +22,11 @@ const hideDropdown = () => {
     <div class="flex-none">
       <div class="dropdown dropdown-end lg:hidden">
         <button
-            class="btn btn-ghost lg:hidden"
+            class="btn btn-ghost lg:hidden cursor-pointer p-4"
             @click="toggleDropdown">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
         </button>
         <ul
             v-show="isDropdownVisible"

@@ -1,6 +1,7 @@
 export interface Experience {
     title: string;
-    description: string;
+    mainDescription: string;
+    secondDescription: string;
     startDate: string;
     endDate: string;
     company: string;

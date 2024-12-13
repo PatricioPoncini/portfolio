@@ -6,11 +6,11 @@ const isDropdownVisible = ref(false);
 const toggleDropdown = (event: Event) => {
   event.stopPropagation();
   isDropdownVisible.value = !isDropdownVisible.value;
-}
+};
 
 const hideDropdown = () => {
   isDropdownVisible.value = false;
-}
+};
 </script>
 
 <template>
@@ -20,24 +20,24 @@ const hideDropdown = () => {
     </div>
 
     <div class="flex-none">
-      <div class="dropdown dropdown-end lg:hidden">
-        <button
-            class="btn btn-ghost lg:hidden cursor-pointer p-4"
-            @click="toggleDropdown">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-        </button>
+      <details class="dropdown dropdown-end lg:hidden" @click="toggleDropdown">
+        <summary class="btn btn-ghost lg:hidden cursor-pointer p-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </summary>
+
         <ul
             v-show="isDropdownVisible"
             class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#4338ca] rounded-box w-52 text-lg font-semibold"
-            @click="hideDropdown">
+            @click="hideDropdown"
+        >
           <li><a href="#aboutMe">Sobre mí</a></li>
           <li><a href="#experiences">Experiencia</a></li>
           <li><a href="#skills">Habilidades</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
-      </div>
+      </details>
 
       <ul class="menu menu-horizontal hidden lg:flex px-1 text-lg font-semibold">
         <li><a href="#aboutMe">Sobre mí</a></li>

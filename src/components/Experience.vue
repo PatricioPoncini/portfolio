@@ -9,17 +9,19 @@ onMounted(() => {
   experiences.value = [
     {
       title: "Desarrollador Full Stack",
-      description: "Actualmente desempeño el rol de desarrollador full stack trabajando junto a mi equipo para mantener y desarrollar microservicios, así como en la creación del frontend, tanto para las vistas principales como para el panel de administrador. Durante este tiempo, he adquirido conocimientos en patrones de diseño como Saga para la coordinación de microservicios, lo que ha mejorado la eficiencia y la resiliencia de las soluciones implementadas. ",
-      startDate: "Septiembre 2023",
+      mainDescription: "Actualmente desempeño el rol de desarrollador full stack trabajando junto a mi equipo para mantener y desarrollar microservicios, así como en la creación del frontend, tanto para las vistas principales como para las interfaces internas de gestión.",
+      secondDescription: "Desde que comencé adquirí conocimientos sólidos en patrones de diseño como Saga para la coordinación y optimización de servicios distribuidos, mejorando la eficiencia y resiliencia de las soluciones implementadas.  También exploré el uso de encolamiento de mensajes, la implementación de llamadas gRPC, y la integración de bases de datos tanto SQL como NoSQL, lo que amplió mi comprensión de arquitecturas modernas. Además, perfeccioné mis habilidades técnicas en los lenguajes de programación utilizados, elevando la calidad y el rendimiento del código.",
+      startDate: "Sept. 2023",
       endDate: "Presente",
       company: "Legendaryum",
-      technologies: ["TypeScript", "Node.js", "Express.js", "Go", "Gin", "PostgreSQL", "MongoDB", "Redis"]
+      technologies: ["TypeScript", "Node.js", "Express.js", "Go", "Gin", "Rust", "PostgreSQL", "MongoDB", "Redis", "Vue", "HTML", "CSS", "TailwindCSS"]
     },
     {
       title: "Desarrollador Full Stack",
-      description: "Durante mi tiempo en esta empresa me desempeñé como desarrollador full stack, creando un sistema robusto y escalable para una oficina virtual. Mi principal objetivo fue digitalizar y simplificar la gestión de trámites, eliminando la necesidad de atención presencial y logrando que el proceso sea completamente virtual y fácil de usar. Además, contribuí al desarrollo del frontend, diseñando y optimizando las vistas tanto de la página principal como del panel administrativo, asegurando una experiencia de usuario intuitiva y eficiente en ambas interfaces.",
-      startDate: "Septiembre 2022",
-      endDate: "Septiembre 2023",
+      mainDescription: "Durante mi tiempo en esta empresa, desempeñé el rol de desarrollador full stack, donde tuve mi primer acercamiento al mundo laboral. Junto con el equipo de trabajo, desarrollamos un proyecto completo desde sus inicios, lo que me permitió aprender significativamente sobre backend y frontend.",
+      secondDescription: "Mi principal objetivo fue diseñar e implementar un sistema robusto y escalable para una oficina virtual, enfocado en digitalizar y simplificar la gestión de trámites. Gracias a este proyecto, eliminamos la necesidad de atención presencial, logrando que el proceso fuera completamente virtual, eficiente y fácil de usar.",
+      startDate: "Sept. 2022",
+      endDate: "Sept. 2023",
       company: "Consultora Pablo Barón",
       technologies: ["TypeScript", "Node.js", "Express.js", "MySQL", "Vue", "HTML", "CSS", "TailwindCSS"]
     },
@@ -34,7 +36,8 @@ onMounted(() => {
       <div v-for="experience in experiences" :key="experience.title">
         <ExperienceCard
             :title="experience.title"
-            :description="experience.description"
+            :main-description="experience.mainDescription"
+            :second-description="experience.secondDescription"
             :start-date="experience.startDate"
             :end-date="experience.endDate"
             :company="experience.company"

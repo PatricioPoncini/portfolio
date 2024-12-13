@@ -4,7 +4,7 @@ import { onMounted, ref } from "vue";
 const skills = ref<string[]>([]);
 
 onMounted(() => {
-  skills.value = ["Typescript", "Node.js", "Express.js", "Go", "Gin", "PostgreSQL", "MongoDB", "Redis", "Docker", "Vue3", "TailwindCSS", "HTML", "CSS"];
+  skills.value = ["Typescript", "Node.js", "Express.js", "Go", "Gin", "Rust", "MySQL", "PostgreSQL", "MongoDB", "Redis", "Docker", "Vue3", "TailwindCSS", "HTML", "CSS"];
 });
 </script>
 

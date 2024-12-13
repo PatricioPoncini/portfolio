@@ -1,17 +1,18 @@
-# `Mi portfolio`
-Repositorio de mi portfolio actualizado.
+# `My portfolio`
+Repository of my current portfolio.
 
-## `Tecnologías utilizadas`
+## `Technologies used`
 [![My Skills](https://skillicons.dev/icons?i=ts,vue,tailwind,html,css)](https://skillicons.dev)
 
-## `Pasos para clonarlo`
-1. Clonar el repositorio utilizando ejecutando `https://github.com/PatricioPoncini/portfolio.git`
-2. Crear un archivo `.env` con el ejemplo que aparece más abajo en este README.md.
-3. Una vez dentro del mismo, ejecutar el comando `npm i` para instalar dependencias.
-4. Ya instaladas, con el comando `npm run dev` se levantará el frontend en el puerto `:5173`
+## `Steps to clone`
+1. Clone the repository by running `git clone https://github.com/PatricioPoncini/portfolio.git`
+2. Create a `.env` file using the example provided below in this README.md
+3. Once inside the project, run the command `npm i` to install dependencies
+4. After the installation is complete, use the command `npm run dev` to start the frontend on port `:5173`
+
 
 ## `.env`
 ```dotenv
-# Sustituye '12345678' por tu ID de API proporcionado por el servicio.
+# Replace '12345678' with your API ID provided by the service
 VITE_EMAIL_ID=12345678
 ```

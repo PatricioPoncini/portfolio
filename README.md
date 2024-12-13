@@ -1,5 +1,17 @@
-# Vue 3 + TypeScript + Vite
+# `Mi portfolio`
+Repositorio de mi portfolio actualizado.
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## `Tecnologías utilizadas`
+[![My Skills](https://skillicons.dev/icons?i=ts,vue,tailwind,html,css)](https://skillicons.dev)
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## `Pasos para clonarlo`
+1. Clonar el repositorio utilizando ejecutando `https://github.com/PatricioPoncini/portfolio.git`
+2. Crear un archivo `.env` con el ejemplo que aparece más abajo en este README.md.
+3. Una vez dentro del mismo, ejecutar el comando `npm i` para instalar dependencias.
+4. Ya instaladas, con el comando `npm run dev` se levantará el frontend en el puerto `:5173`
+
+## `.env`
+```dotenv
+# Sustituye '12345678' por tu ID de API proporcionado por el servicio.
+VITE_EMAIL_ID=12345678
+```

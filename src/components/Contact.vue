@@ -77,7 +77,7 @@ async function submitForm(event: Event) {
       />
       <textarea
           placeholder="Mensaje"
-          class="textarea textarea-bordered w-full bg-white resize-none"
+          class="textarea textarea-bordered w-full bg-white resize-none text-[16px]"
           rows="4"
           v-model="message">
       </textarea>

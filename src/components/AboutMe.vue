@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col px-8 bg-gray-50 py-12" id="aboutMe">
     <div class="flex flex-col items-center justify-center gap-8">
-      <p class="text-gray-900 text-4xl font-bold text-center">Sobre mí</p>
+      <h1 class="text-gray-900 text-4xl font-bold text-center">Sobre mí</h1>
       <p class="text-gray-900 text-base sm:text-lg md:text-xl max-w-3xl text-center">
         Mi nombre es Patricio Poncini, y soy un desarrollador full stack dedicado a transformar ideas en soluciones digitales escalables y eficientes.
       </p>

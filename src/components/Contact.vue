@@ -63,6 +63,14 @@ const validateForm = () => {
   return true;
 }
 
+const onCaptchaVerified = (token: string) => {
+  captchaToken.value = token;
+}
+
+const onCaptchaExpired = () => {
+  captchaToken.value = "";
+}
+
 async function submitForm(event: Event) {
   event.preventDefault();
   if (!validateForm()) return;
@@ -132,8 +140,8 @@ async function submitForm(event: Event) {
         <div
             class="h-captcha"
             data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-            data-callback="onCaptchaVerified"
-            data-expired-callback="onCaptchaExpired"
+            :data-callback="onCaptchaVerified"
+            :data-expired-callback="onCaptchaExpired"
         ></div>
       </div>
       <input type="checkbox" name="botcheck" class="hidden" style="display: none;">

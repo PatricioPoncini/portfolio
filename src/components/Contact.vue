@@ -11,8 +11,8 @@ declare const hcaptcha: any;
 
 declare global {
   interface Window {
-    onCaptchaVerified: (token: string) => void;
-    onCaptchaExpired: () => void;
+    onCaptchaVerified: ((token: string) => void) | undefined;
+    onCaptchaExpired: (() => void) | undefined;
   }
 }
 
@@ -32,8 +32,8 @@ onMounted(() => {
   document.head.appendChild(script);
 
   return () => {
-    delete window.onCaptchaVerified;
-    delete window.onCaptchaExpired;
+    window.onCaptchaVerified = undefined;
+    window.onCaptchaExpired = undefined;
   };
 });
 

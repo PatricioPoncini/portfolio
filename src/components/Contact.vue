@@ -63,14 +63,6 @@ const validateForm = () => {
   return true;
 }
 
-const onCaptchaVerified = (token: string) => {
-  captchaToken.value = token;
-}
-
-const onCaptchaExpired = () => {
-  captchaToken.value = "";
-}
-
 async function submitForm(event: Event) {
   event.preventDefault();
   if (!validateForm()) return;

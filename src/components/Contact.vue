@@ -98,6 +98,7 @@ async function submitForm(event: Event) {
       name.value = "";
       email.value = "";
       message.value = "";
+      captchaToken.value = "";
       hcaptcha.reset();
     } else {
       toast.error("Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.");
@@ -140,8 +141,8 @@ async function submitForm(event: Event) {
         <div
             class="h-captcha"
             data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-            :data-callback="onCaptchaVerified"
-            :data-expired-callback="onCaptchaExpired"
+            data-callback="onCaptchaVerified"
+            data-expired-callback="onCaptchaExpired"
         ></div>
       </div>
       <input type="checkbox" name="botcheck" class="hidden" style="display: none;">

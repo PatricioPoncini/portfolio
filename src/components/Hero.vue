@@ -5,7 +5,7 @@
         ¡Hola, soy Patricio Poncini!
       </h1>
       <h2 class="text-white text-2xl sm:text-3xl md:text-4xl font-semibold text-center">
-        Desarrollador Full Stack
+        Desarrollador Backend
       </h2>
       <div class="flex flex-col text-center sm:flex-row gap-4">
         <a
@@ -15,7 +15,8 @@
           Contáctame
         </a>
         <a
-            href="https://drive.usercontent.google.com/u/0/uc?id=16VA6A4jtB0eR0CIqnUX7hRdzakhyO3M-&export=download"
+            target="_blank"
+            href="https://drive.google.com/file/d/19jcvCYAJme_7Pm4477QkmFRgQAP_AEsV/view?usp=sharing"
             class="rounded-full text-center text-lg font-medium bg-white hover:bg-gray-200 text-indigo-600 px-8 py-3 transition-all duration-300 shadow-md hover:shadow-lg"
         >
           Descargar CV

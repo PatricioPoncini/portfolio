@@ -16,7 +16,7 @@
         </a>
         <a
             target="_blank"
-            href="https://drive.google.com/file/d/19jcvCYAJme_7Pm4477QkmFRgQAP_AEsV/view?usp=sharing"
+            href="https://docs.google.com/file/d/1bchP0Y85FYWhfnZQU6IIebtkdG_Di3yf/view"
             class="rounded-full text-center text-lg font-medium bg-white hover:bg-gray-200 text-indigo-600 px-8 py-3 transition-all duration-300 shadow-md hover:shadow-lg"
         >
           Descargar CV

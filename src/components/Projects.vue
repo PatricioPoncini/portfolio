@@ -29,7 +29,7 @@ const projects = ref<Project[]>([
 
 <template>
   <div class="flex flex-col bg-gray-100 gap-10 py-16 px-8" id="projects">
-    <p class="text-gray-900 text-3xl md:text-4xl font-bold text-center">Projects</p>
+    <p class="text-gray-900 text-3xl md:text-4xl font-bold text-center">Proyectos</p>
     <div class="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
       <ProjectCard
           v-for="project in projects"

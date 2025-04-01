@@ -12,7 +12,7 @@ onMounted(() => {
   <div class="bg-gray-50 py-8" id="skills">
     <div class="container mx-auto px-4">
       <p class="text-gray-900 text-3xl sm:text-4xl md:text-4xl font-bold text-center mb-8">
-        Skills
+        Habilidades Técnicas
       </p>
       <div class="flex flex-wrap gap-4 justify-center">
         <div

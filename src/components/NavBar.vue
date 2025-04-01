@@ -34,6 +34,7 @@ const hideDropdown = () => {
         >
           <li><a href="#aboutMe">Sobre mí</a></li>
           <li><a href="#experiences">Experiencia</a></li>
+          <li><a href="#projects">Proyectos</a></li>
           <li><a href="#skills">Habilidades</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
@@ -42,6 +43,7 @@ const hideDropdown = () => {
       <ul class="menu menu-horizontal hidden lg:flex px-1 text-lg font-semibold">
         <li><a href="#aboutMe">Sobre mí</a></li>
         <li><a href="#experiences">Experiencia</a></li>
+        <li><a href="#projects">Proyectos</a></li>
         <li><a href="#skills">Habilidades</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>

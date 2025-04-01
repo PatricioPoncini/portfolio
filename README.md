@@ -15,4 +15,5 @@ Repository of my current portfolio.
 ```dotenv
 # Replace '12345678' with your API ID provided by the service
 VITE_EMAIL_ID=12345678
+VITE_CV_PUBLIC_URL=https://example.com.ar
 ```

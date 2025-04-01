@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import {onMounted, ref} from "vue";
+
+const cvPublicUrl = ref("");
+onMounted(() => {
+  cvPublicUrl.value = import.meta.env.VITE_CV_PUBLIC_URL
+})
+</script>
+
 <template>
   <div class="grid grid-cols-1 bg-indigo-600 min-h-screen">
     <div class="flex flex-col items-center justify-center gap-8 px-6 py-10">
@@ -16,7 +25,7 @@
         </a>
         <a
             target="_blank"
-            href="https://docs.google.com/file/d/1bchP0Y85FYWhfnZQU6IIebtkdG_Di3yf/view"
+            :href="cvPublicUrl"
             class="rounded-full text-center text-lg font-medium bg-white hover:bg-gray-200 text-indigo-600 px-8 py-3 transition-all duration-300 shadow-md hover:shadow-lg"
         >
           Descargar CV

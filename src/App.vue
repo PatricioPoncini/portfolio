@@ -8,6 +8,7 @@ import Footer from "./components/Footer.vue";
 import NavBar from "./components/NavBar.vue";
 import { ToastifyContainer } from "vue3-toastify";
 import 'vue3-toastify/dist/index.css';
+import Projects from "./components/Projects.vue";
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import 'vue3-toastify/dist/index.css';
   <Hero />
   <AboutMe />
   <Experience />
+  <Projects />
   <Skills />
   <Contact />
   <Footer />

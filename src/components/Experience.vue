@@ -9,21 +9,33 @@ onMounted(() => {
   experiences.value = [
     {
       title: "Desarrollador Backend",
-      mainDescription: "Actualmente desempeño el rol de desarrollador backend trabajando junto a mi equipo para mantener y desarrollar microservicios, así como en la creación del frontend, tanto para las vistas principales como para las interfaces internas de gestión.",
-      secondDescription: "Desde que comencé adquirí conocimientos sólidos en patrones de diseño como Saga para la coordinación y optimización de servicios distribuidos, mejorando la eficiencia y resiliencia de las soluciones implementadas.  También exploré el uso de encolamiento de mensajes, la implementación de llamadas gRPC, y la integración de bases de datos tanto SQL como NoSQL, lo que amplió mi comprensión de arquitecturas modernas. Además, perfeccioné mis habilidades técnicas en los lenguajes de programación utilizados, elevando la calidad y el rendimiento del código.",
-      startDate: "Sept. 2023",
+      bulletPoints: [
+        "Liderado del equipo de backend en el diseño, optimización y mantenimiento de microservicios, impulsando nuevas funcionalidades para mejorar el rendimiento y la fiabilidad de la plataforma.",
+        "Desarrollo de microservicios backend con un enfoque en escalabilidad y eficiencia, utilizando TypeScript, Go y Rust.",
+        "Implementación de patrones de diseño distribuidos, como Saga, utilizando RabbitMQ para garantizar la fiabilidad en la comunicación entre microservicios y evitar fallos en las transacciones.",
+        "Uso de gRPC para optimizar la comunicación entre servicios, disminuyendo el consumo de ancho de banda y mejorando el rendimiento.",
+        "Diseño y administración de bases de datos SQL y NoSQL (PostgreSQL, MongoDB, Redis) para almacenamiento eficiente y escalable.",
+        "Automatización de tareas operativas y procesos de despliegue mediante scripts de Shell.",
+        "Implementación de pruebas unitarias y de integración exhaustivas en microservicios, alcanzando más del 90% de cobertura de código.",
+        "Desarrollo de frontend con Vue.js, Pinia y TailwindCSS."
+      ],
+      startDate: "Septiembre 2023",
       endDate: "Presente",
       company: "Legendaryum",
-      technologies: ["TypeScript", "Node.js", "Express.js", "Go", "Gin", "Rust", "PostgreSQL", "MongoDB", "Redis", "Vue", "HTML", "CSS", "TailwindCSS"]
+      technologies: ["TypeScript", "Node.js", "Express.js", "Go", "Gin", "Rust", "PostgreSQL", "MongoDB", "Redis", "Vue", "TailwindCSS"]
     },
     {
       title: "Desarrollador Backend",
-      mainDescription: "Durante mi tiempo en esta empresa, desempeñé el rol de desarrollador backend, donde tuve mi primer acercamiento al mundo laboral. Junto con el equipo de trabajo, desarrollamos un proyecto completo desde sus inicios, lo que me permitió aprender significativamente sobre backend y frontend.",
-      secondDescription: "Mi principal objetivo fue diseñar e implementar un sistema robusto y escalable para una oficina virtual, enfocado en digitalizar y simplificar la gestión de trámites. Gracias a este proyecto, eliminamos la necesidad de atención presencial, logrando que el proceso fuera completamente virtual, eficiente y fácil de usar.",
-      startDate: "Sept. 2022",
-      endDate: "Sept. 2023",
+      bulletPoints: [
+        "Desarrollo y mantenimiento de APIs RESTful con Node.js, Express, TypeScript y TypeORM.",
+        "Gestión y optimización de bases de datos en MySQL, asegurando integridad y eficiencia en las consultas.",
+        "Despliegue y administración de APIs mediante servicios de infraestructura gestionada.",
+        "Desarrollo junto con el equipo de frontend en la integración de los servicios con Vue.js, Pinia y TailwindCSS."
+      ],
+      startDate: "Septiembre 2022",
+      endDate: "Septiembre 2023",
       company: "Consultora Pablo Barón",
-      technologies: ["TypeScript", "Node.js", "Express.js", "MySQL", "Vue", "HTML", "CSS", "TailwindCSS"]
+      technologies: ["TypeScript", "Node.js", "Express.js", "MySQL", "Vue", "TailwindCSS"]
     },
   ] satisfies Experience[];
 });
@@ -36,8 +48,7 @@ onMounted(() => {
       <div v-for="experience in experiences" :key="experience.title">
         <ExperienceCard
             :title="experience.title"
-            :main-description="experience.mainDescription"
-            :second-description="experience.secondDescription"
+            :bullet-points="experience.bulletPoints"
             :start-date="experience.startDate"
             :end-date="experience.endDate"
             :company="experience.company"

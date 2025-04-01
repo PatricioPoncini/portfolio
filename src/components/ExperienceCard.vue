@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Experience } from "../types/experience.ts";
 
-const { title, startDate, endDate, company, mainDescription, secondDescription, technologies } = defineProps<Experience>();
+const { title, startDate, endDate, company, bulletPoints, technologies } = defineProps<Experience>();
 </script>
 
 <template>
@@ -13,8 +13,11 @@ const { title, startDate, endDate, company, mainDescription, secondDescription, 
       <span class="mx-2">-</span>
       <p>{{ endDate }}</p>
     </div>
-    <p class="text-gray-600 text-lg leading-relaxed mb-4">{{ mainDescription }}</p>
-    <p class="text-gray-600 text-lg leading-relaxed">{{ secondDescription }}</p>
+    <ul v-if="bulletPoints.length > 0" class="list-disc pl-6 mb-4 space-y-2">
+      <li v-for="(point, index) in bulletPoints" :key="index" class="text-gray-600 text-lg leading-relaxed">
+        {{ point }}
+      </li>
+    </ul>
     <div class="flex flex-wrap gap-2 mt-6">
       <div v-for="tech in technologies" :key="tech" class="bg-[#e3e4fb] text-[#4f46e5] font-semibold px-4 py-2 rounded-full">
         {{ tech }}

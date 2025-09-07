@@ -8,7 +8,21 @@ const experiences = ref<Experience[]>([]);
 onMounted(() => {
   experiences.value = [
     {
-      title: "Desarrollador Backend",
+      title: "Software Developer",
+      bulletPoints: [
+        "Diseño e implementación de servicios backend junto a un equipo de desarrollo usando Kotlin, Go y TypeScript.",
+        "Implementación de arquitecturas serverless en AWS, con Lambda, DynamoDB, DocumentDB, Kinesis, SQS y SNS.",
+        "Integración de microservicios mediante patrones event-driven y colas distribuidas.",
+        "Modelado de esquemas e índices en DynamoDB y DocumentDB para soportar diferentes patrones de acceso.",
+        "Desarrollo de pruebas unitarias y de integración en microservicios para validar funcionalidad y cobertura de código.",
+      ],
+      startDate: "Junio 2025",
+      endDate: "Presente",
+      company: "itti",
+      technologies: ["Kotlin", "Go", "Typescript", "Node.js", "Amazon Web Services (AWS)", "AWS Lambda", "Amazon Simple Notification Service (SNS)", "Amazon Simple Queue Service (SQS)", "Amazon Kinesis", "Amazon DynamoDB", "Amazon DocumentDB"]
+    },
+    {
+      title: "Backend Developer",
       bulletPoints: [
         "Liderado del equipo de backend en el diseño, optimización y mantenimiento de microservicios, impulsando nuevas funcionalidades para mejorar el rendimiento y la fiabilidad de la plataforma.",
         "Desarrollo de microservicios backend con un enfoque en escalabilidad y eficiencia, utilizando TypeScript, Go y Rust.",
@@ -20,12 +34,12 @@ onMounted(() => {
         "Desarrollo de frontend con Vue.js, Pinia y TailwindCSS."
       ],
       startDate: "Septiembre 2023",
-      endDate: "Presente",
+      endDate: "Junio 2025",
       company: "Legendaryum",
       technologies: ["TypeScript", "Node.js", "Express.js", "Go", "Gin", "Rust", "PostgreSQL", "MongoDB", "Redis", "Vue", "TailwindCSS"]
     },
     {
-      title: "Desarrollador Backend",
+      title: "Backend Developer",
       bulletPoints: [
         "Desarrollo y mantenimiento de APIs RESTful con Node.js, Express, TypeScript y TypeORM.",
         "Gestión y optimización de bases de datos en MySQL, asegurando integridad y eficiencia en las consultas.",
